@@ -17,7 +17,7 @@ const StripeCheckoutButton = ({ price }) => {
       },
     })
       .then((response) => {
-        alert('succesful payment');
+        alert('Payment authorized! Thank you for shopping at PLCE!');
       })
       .catch((error) => {
         console.log('Payment Error: ', error);

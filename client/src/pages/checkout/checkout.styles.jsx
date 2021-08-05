@@ -22,6 +22,13 @@ export const CheckoutHeaderContainer = styled.div`
   border-bottom: 1px solid darkgrey;
 `;
 
+export const CheckoutHeader = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Fondamento', cursive;
+`;
+
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
   width: 23%;
