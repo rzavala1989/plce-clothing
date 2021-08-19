@@ -4,24 +4,25 @@ import axios from 'axios';
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
-  const publishableKey =
-    'pk_test_51JJDyZAjRZkrCM5GgBrAu3TVueW2pj11mw3MuHFnMXSKEntdT8NrKIlqTJ9PC6sRV3eYSLkhRY1chhFDOOWQJJCY003RgxJO66';
+  const publishableKey = 'pk_test_b7a3hFL5nC3qlBCZ6bQACpez00gyMMP52H';
 
-  const onToken = (token) => {
+  const onToken = token => {
     axios({
       url: 'payment',
       method: 'post',
       data: {
         amount: priceForStripe,
-        token: token,
-      },
+        token: token
+      }
     })
-      .then((response) => {
-        alert('Payment authorized! Thank you for shopping at PLCE!');
+      .then(response => {
+        alert('succesful payment');
       })
-      .catch((error) => {
+      .catch(error => {
         console.log('Payment Error: ', error);
-        alert('There was an issue with your payment! Please make sure you use the provided credit card.');
+        alert(
+          'There was an issue with your payment! Please make sure you use the provided credit card.'
+        );
       });
   };
 

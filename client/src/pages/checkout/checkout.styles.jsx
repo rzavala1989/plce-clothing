@@ -12,6 +12,10 @@ export const CheckoutPageContainer = styled.div`
     margin-left: auto;
     margin-top: 50px;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 export const CheckoutHeaderContainer = styled.div`
@@ -22,19 +26,20 @@ export const CheckoutHeaderContainer = styled.div`
   border-bottom: 1px solid darkgrey;
 `;
 
-export const CheckoutHeader = styled.div`
-  width: 100%;
-  text-align: center;
-  margin-bottom: 25px;
-  font-family: 'Fondamento', cursive;
-`;
-
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
   width: 23%;
 
   &:last-child {
     width: 8%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+
+    &:last-child {
+      width: 12%;
+    }
   }
 `;
 
